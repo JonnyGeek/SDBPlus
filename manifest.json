@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SDBPlus",
+  "version": "1.0.0",
+  "description": "SDBPlus",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.twitch.tv/*",
+    "https://www.streamdatabase.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.twitch.tv/*", "https://www.streamdatabase.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
